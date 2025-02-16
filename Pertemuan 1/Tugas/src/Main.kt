@@ -1,27 +1,23 @@
 class PersegiPanjang(val height: Int, val width: Int) {
-    fun rumusluas(): Int {
+    fun rumusLuas(): Int {
         return height * width
     }
 
-    fun rumuskeliling(): Int {
+    fun rumusKeling(): Int {
         return (height + width) * 2
     }
-
 }
 
+fun main(args: Array<String>) {
+    val panjang = args[0].toInt()
+    val lebar = args[1].toInt()
 
-fun main() {
-    val panjang = 4
-    val lebar = 2
-
-    val persegipanjang = PersegiPanjang(panjang, lebar)
+    val persegiPanjang = PersegiPanjang(panjang, lebar)
+    val luas = persegiPanjang.rumusLuas()
+    val kelling = persegiPanjang.rumusKeling()
 
     println("Panjang: $panjang")
     println("Lebar: $lebar")
-
-    val luas = persegipanjang.rumusluas()
     println("Luas: $luas")
-
-    val keliling = persegipanjang.rumuskeliling()
-    println("Keliling: $keliling")
+    println("Kelling: $kelling")
 }
